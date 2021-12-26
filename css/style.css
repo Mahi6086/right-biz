@@ -1,0 +1,178 @@
+:root {
+  --white: #fff;
+  --bg: #f6f7f9;
+  --black: #333;
+  --blue: #4267cf;
+  --orange: #ffa500;
+
+  --grey: #eee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  /* background-color: #0071c2; */
+  background-color: var(--blue);
+}
+/*-------
+ NAVBAR 
+ -------*/
+.container {
+  margin: 0px 30px;
+}
+
+.highlight {
+  color: var(--orange);
+}
+.section-title h2 {
+  font-size: 40px;
+  padding: 100px 0 50px 0;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+}
+.logo h2 {
+  font-size: 35px;
+  color: var(--white);
+}
+.navigation li {
+  list-style: none;
+  display: inline-block;
+}
+.navigation li a {
+  text-decoration: none;
+  color: var(--white);
+  padding: 10px 20px;
+}
+.navber-btn {
+  border: 0;
+  outline: 0;
+  background-color: var(--bg);
+  color: var(--blue);
+  cursor: pointer;
+  border-radius: 22px;
+  padding: 12px 17px;
+  font-size: 15px;
+}
+#navber-btn {
+  margin-left: 15px;
+  background-color: var(--orange);
+  color: var(--white);
+}
+.horizental-line {
+  margin-top: 10px;
+  border-bottom: 1px solid rgb(185, 185, 185);
+  width: 100%;
+}
+
+.toggler-icon {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+#menu-toggler {
+  display: none;
+}
+.toggler-icon span {
+  height: 4px;
+  width: 30px;
+  margin-bottom: 4px;
+
+  background-color: var(--black);
+}
+.menu-toggler-label {
+  display: none;
+}
+#menu-toggler:checked ~ .navigation {
+  transform: translateX(0);
+}
+/*-------
+ NAVBAR 
+ -------*/
+
+/*-------
+ Banner 
+ -------*/
+
+.search-container {
+  margin-top: 20%;
+}
+.search-section {
+  border-radius: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 0px;
+  background-color: var(--white);
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.input-field {
+  border: 0;
+  outline: 0;
+  width: 450px;
+  padding: 13px 10px;
+  margin-left: 10px;
+  border-radius: 20px;
+  background-color: var(--grey);
+}
+::placeholder {
+  padding-left: 10px;
+}
+/*-------
+ Banner 
+ -------*/
+
+/*------------------------------------
+ Use Media querey for mobile responsive
+ --------------------------------------*/
+@media (max-width: 750px) {
+  #navber-btn {
+    margin-top: 15px;
+  }
+  .menu-toggler-label {
+    display: block;
+  }
+  .navigation {
+    position: fixed;
+    background-color: rgb(59, 59, 59);
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 99;
+    width: 500px;
+    max-width: 70%;
+    padding: 50px;
+    transform: translateX(-100%);
+    transition: 0.3s linear;
+  }
+  .navigation li {
+    display: block;
+    text-align: center;
+    margin: 30px;
+  }
+  .navigation li a:hover {
+    color: var(--white);
+  }
+  .flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .input-field {
+    width: 300px;
+    margin-top: 10px;
+  }
+}
